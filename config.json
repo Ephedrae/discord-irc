@@ -1,0 +1,25 @@
+[
+  {
+    "nickname": "nickname",
+    "server": "irc.server.net",
+    "discordToken": "Discord_Token",
+    "autoSendCommands": [
+    ["PRIVMSG", "NickServ", "IDENTIFY password"]
+],
+    "channelMapping": {
+      "#discordchannel": "#ircchannel"
+    },
+    "format": {
+      "commandPrelude": "Command sent by {$nickname}",
+      "ircText": "<{$displayUsername}> {$text}",
+      "urlAttachment": "<{$displayUsername}> {$attachmentURL}",
+      "discord": "**<{$author}>** {$withMentions}"
+    },
+    "ircNickColor": false,
+    "commandCharacters": ["!", "."],
+    "ignoreUsers": {
+      "irc": ["irc_nick1", "irc_nick2"], // Ignore specified IRC nicks and do not send their messages to Discord.
+      "discord": ["discord_nick1", "discord_nick2"] // Ignore specified Discord nicks and do not send their messages to IRC.
+    }
+}
+]
