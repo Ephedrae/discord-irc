@@ -13,7 +13,7 @@
       "commandPrelude": "Command sent by {$nickname}",
       "ircText": "<{$displayUsername}> {$text}",
       "urlAttachment": "<{$displayUsername}> {$attachmentURL}",
-      "discord": "**<{$author}>** {$withMentions}"
+      "discord": "<{$author}> {$withMentions}"
     },
     "ircNickColor": false,
     "commandCharacters": ["!", "."],
