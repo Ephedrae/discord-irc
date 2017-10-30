@@ -1,21 +1,27 @@
 [
   {
-    "nickname": "nickname",
-    "server": "irc.server.net",
-    "discordToken": "Discord_Token",
+    "nickname": "punk_relay",
+    "server": "chat.freenode.net",
+    "discordToken": "",
     "autoSendCommands": [
-    ["PRIVMSG", "NickServ", "IDENTIFY password"]
+    ["PRIVMSG", "NickServ", "IDENTIFY "]
+    //["MODE", "test", "+x"],
+    //["AUTH", "test", "password"]
 ],
     "channelMapping": {
-      "#discordchannel": "#ircchannel"
+      "#cyberpunk": "#cyberpunk"
+    },
+    "ircOptions": { // Optional node-irc options
+      "floodProtection": true, // On by default
+      "floodProtectionDelay": 500 // 500 by default
     },
     "format": {
       "commandPrelude": "Command sent by {$nickname}",
       "ircText": "<{$displayUsername}> {$text}",
-      "urlAttachment": "<{$displayUsername}> {$attachmentURL}",
-      "discord": "<{$author}> {$withMentions}"
+      "urlAttachment": "{$displayUsername} {$attachmentURL}",
+      "discord": "`{$author}`: {$withMentions}"
     },
-    "ircNickColor": false,
+    "ircNickColor": true,
     "commandCharacters": ["!", "."],
     "ignoreUsers": {
       "irc": ["irc_nick1", "irc_nick2"], // Ignore specified IRC nicks and do not send their messages to Discord.
