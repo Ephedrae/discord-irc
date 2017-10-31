@@ -50,9 +50,9 @@
     "erlpack": "^0.1.0",
     "node-opus": "^0.2.6",
     "opusscript": "^0.0.3",
-    "sodium": "^2.0.1",
-    "libsodium-wrappers": "^0.5.4",
-    "uws": "^0.14.5"
+    "uws": "^0.14.5",
+    "erlpack": "discordapp/erlpack",
+    "zlib-sync": "^0.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
